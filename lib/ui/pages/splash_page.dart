@@ -17,6 +17,7 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   @override
+  //---------------Timer Navi to Destination Page------------------------------
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
@@ -28,6 +29,7 @@ class _SplashPageState extends State<SplashPage> {
       );
     });
   }
+  //---------------Timer Navi to Destination Page------------------------------
 
   @override
   Widget build(BuildContext context) {

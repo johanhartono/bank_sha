@@ -36,6 +36,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //---------------On Boarding Displayed Image--------------------------
             CarouselSlider(
               items: [
                 Image.asset(
@@ -62,9 +63,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   }),
               carouselController: carouselController,
             ),
+            //---------------On Boarding Displayed Image--------------------------
             const SizedBox(
               height: 80,
             ),
+            //---------------White Boxed -----------------------------------------
             Container(
                 margin: const EdgeInsets.symmetric(
                   horizontal: 24,
@@ -73,12 +76,15 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   horizontal: 22,
                   vertical: 24,
                 ),
+                //---------------    White Boxed------------------------------
                 decoration: BoxDecoration(
                   color: whiteColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
+                //---------------    White Boxed------------------------------
                 child: Column(
                   children: [
+                    //---------------   Titles inside White Boxed------------------------------
                     Text(
                       titles[currentIndex],
                       style: blackTextStyle.copyWith(
@@ -87,9 +93,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                    //---------------   Titles inside White Boxed------------------------------
                     const SizedBox(
                       height: 26,
                     ),
+                    //---------------   Sub Titles inside White Boxed------------------------------
                     Text(
                       subtitles[currentIndex],
                       style: greyTextStyle.copyWith(
@@ -97,12 +105,15 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                    //---------------   Sub Titles inside White Boxed------------------------------
                     SizedBox(
                       height: currentIndex == 2 ? 38 : 50,
                     ),
+                    //---------------Last Pages = 2    -------------------------------
                     currentIndex == 2
                         ? Column(
                             children: [
+                              //---------------   Get Started------------------------------
                               SizedBox(
                                   width: double.infinity,
                                   height: 34,
@@ -120,9 +131,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                             fontSize: 16,
                                             fontWeight: semiBold,
                                           )))),
+                              //---------------   Get Started------------------------------
                               const SizedBox(
                                 height: 20,
                               ),
+                              //---------------   Sign In------------------------------
                               SizedBox(
                                   width: double.infinity,
                                   height: 24,
@@ -136,10 +149,16 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                           style: whiteTextStyle.copyWith(
                                               fontSize: 16,
                                               color: greyColor)))),
+                              //---------------   Sign In------------------------------
                             ],
                           )
-                        : Row(
+                        :
+                        //---------------Last Pages = 2    -------------------------------
+                        //
+                        //--------------- Pages 1 and 2    -------------------------------
+                        Row(
                             children: [
+                              //---------------   Small Circle Steps------------------------------
                               Container(
                                 width: 12,
                                 height: 12,
@@ -170,8 +189,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                       : lightBackgroundColor,
                                 ),
                               ),
+                              //---------------   Small Circle Steps------------------------------
                               const Spacer(),
-                              // ignore: sized_box_for_whitespace
+                              //---------------  Button Continue-------------------------------
                               SizedBox(
                                   width: 150,
                                   height: 50,
@@ -189,10 +209,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                             fontSize: 16,
                                             fontWeight: semiBold,
                                           ))))
+                              //---------------  Button Continue-------------------------------
                             ],
                           )
+                    //--------------- Pages 1 and 2    -------------------------------
                   ],
                 ))
+            //---------------White Boxed -----------------------------------------
           ],
         )));
   }
